@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://886gwc0041t4"
-path="res://.godot/imported/world_tileset.png-d5487f3a7d4c712c87c971b765658781.ctex"
+uid="uid://c0v0ugi5umjkt"
+path="res://.godot/imported/player-walk.png-50e7a477caaa71902b4a8514e6a99b47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/world_tileset.png"
-dest_files=["res://.godot/imported/world_tileset.png-d5487f3a7d4c712c87c971b765658781.ctex"]
+source_file="res://assests/sprite/player-walk.png"
+dest_files=["res://.godot/imported/player-walk.png-50e7a477caaa71902b4a8514e6a99b47.ctex"]
 
 [params]
 

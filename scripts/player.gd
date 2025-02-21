@@ -50,40 +50,7 @@ func split():
 	is_splitting = true
 	can_split = false  # Disable splitting until recombined
 	
-	animated_sprite.play("split")  
-	await animated_sprite.animation_finished  
-
-	# Create two split characters
-	var left_clone = duplicate()
-	var right_clone = duplicate()
-	
-	left_clone.position = position + Vector2(-20, 0)
-	right_clone.position = position + Vector2(20, 0)
-
-	get_parent().add_child(left_clone)
-	get_parent().add_child(right_clone)
-
-	queue_free()  # Remove the original player
-
-	# Start recombination after delay
-	await get_tree().create_timer(2.0).timeout
-	recombine(left_clone, right_clone)
-
-func recombine(left_clone, right_clone):
-	# Merge the clones into one player
-	var new_player = duplicate()
-	new_player.position = (left_clone.position + right_clone.position) / 2  # Set new position
-	new_player.can_split = false  # Prevent splitting again too fast
-
-	get_parent().add_child(new_player)
-
-	# Remove the clones
-	left_clone.queue_free()
-	right_clone.queue_free()
-
-	# Move the player slightly forward so they don’t touch spikes again
-	new_player.position.y -= 10
-
-	# Reactivate split after a short delay
-	await get_tree().create_timer(2.0).timeout
-	new_player.can_split = true
+	animated_sprite.play("split")
+	await animated_sprite.animation_finished
+	is_splitting = false
+	can_split = true

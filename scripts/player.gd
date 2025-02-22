@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -200.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var camera: Camera2D = $Camera2D
 
 var is_splitting = false  # Prevent movement while splitting
 var can_split = true  # Prevent infinite splitting

@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://b83mpluwwnfkd"]
+[gd_scene load_steps=3 format=3 uid="uid://b83mpluwwnfkd"]
 
 [ext_resource type="Script" path="res://slowtime_area.gd" id="1_re5id"]
+[ext_resource type="PackedScene" uid="uid://b77qvymrlpc08" path="res://scenes/portal.tscn" id="2_5gwwt"]
 
-[node name="SlowtimeArea" type="Area2D"]
+[node name="SlowtimeArea" type="Area2D" node_paths=PackedStringArray("source_portal", "destination_portal")]
 script = ExtResource("1_re5id")
+source_portal = NodePath("SourcePortal")
+destination_portal = NodePath("DestinationPortal")
+
+[node name="SourcePortal" parent="." instance=ExtResource("2_5gwwt")]
+position = Vector2(-334, -179)
+
+[node name="DestinationPortal" parent="." instance=ExtResource("2_5gwwt")]
+position = Vector2(-323, -191)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

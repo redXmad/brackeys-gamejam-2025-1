@@ -2,11 +2,11 @@ extends Area2D
 
 @export var source_portal: Portal
 @export var destination_portal: Portal
-
 @export var player: Player  # Make sure this is the correct path to your player
+@export var portal_y_position: int
 
 var slow_time_active = false
-var slow_time_duration = 0.1  # How long time will stay slow (in seconds)
+var slow_time_duration = 0.2  # How long time will stay slow (in seconds)
 
 func _get_configuration_warninga() -> PackedStringArray:
 	if !source_portal:
@@ -23,14 +23,15 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and not slow_time_active:
 		source_portal.global_position = body.position + Vector2(0, 5)
-		destination_portal.global_position = Vector2(body.position.x, 10)
+		destination_portal.global_position = Vector2(body.position.x, portal_y_position)
 		enable_portals()
 		start_slow_time()
 
 # Function to slow time when the player enters the area
 func start_slow_time():
 	slow_time_active = true
-	Engine.time_scale = 0.1  # Slow down time by 90%
+	Engine.time_scale = 0.2  # Slow down time by 90%
+	player.camera.position_smoothing_speed *= 5
 	
 	# Wait for the timer to timeout
 	await get_tree().create_timer(slow_time_duration).timeout
@@ -42,6 +43,7 @@ func start_slow_time():
 func stop_slow_time():
 	slow_time_active = false
 	Engine.time_scale = 1.0  # Restore normal speed
+	player.camera.position_smoothing_speed /= 5
 
 func disable_portals():
 	source_portal.disable_portal()

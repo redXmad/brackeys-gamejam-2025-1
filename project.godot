@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="gamjam"
-run/main_scene="res://scenes/mains.tscn"
+run/main_scene="res://scenes/Level_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

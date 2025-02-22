@@ -435,15 +435,16 @@ tile_set = SubResource("TileSet_vbgjc")
 
 [node name="SlowtimeArea" parent="." node_paths=PackedStringArray("source_portal", "destination_portal", "player") instance=ExtResource("4_q7x2f")]
 position = Vector2(289, 158)
-source_portal = NodePath("SourcePortal")
-destination_portal = NodePath("DestinationPortal")
+source_portal = NodePath("Portal")
+destination_portal = NodePath("Portal2")
 player = NodePath("../Player")
 
-[node name="SourcePortal" parent="SlowtimeArea" instance=ExtResource("5_60hio")]
-position = Vector2(-334, -179)
+[node name="Portal" parent="SlowtimeArea" instance=ExtResource("5_60hio")]
+position = Vector2(0, 16)
 
-[node name="DestinationPortal" parent="SlowtimeArea" instance=ExtResource("5_60hio")]
-position = Vector2(-323, -191)
+[node name="Portal2" parent="SlowtimeArea" instance=ExtResource("5_60hio")]
+position = Vector2(-218, -88)
+rotation = -3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SlowtimeArea"]
 position = Vector2(-117, 6)

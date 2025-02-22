@@ -1,7 +1,8 @@
 extends CharacterBody2D
+class_name Player
 
 const SPEED = 120.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -200.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D

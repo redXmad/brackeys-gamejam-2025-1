@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ra3refs3aru"
-path="res://.godot/imported/slime_purple.png-3d9e552c3e3aeb2a7f3441f746b4c24b.ctex"
+uid="uid://b6pebgv76yvp4"
+path="res://.godot/imported/Mountains.png-68ea4e9cf7c7d8dd0ef11c6553581c4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/slime_purple.png"
-dest_files=["res://.godot/imported/slime_purple.png-3d9e552c3e3aeb2a7f3441f746b4c24b.ctex"]
+source_file="res://scenes/tiles/Mountains.png"
+dest_files=["res://.godot/imported/Mountains.png-68ea4e9cf7c7d8dd0ef11c6553581c4b.ctex"]
 
 [params]
 

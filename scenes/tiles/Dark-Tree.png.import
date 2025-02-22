@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1o0jipp1iq1y"
-path="res://.godot/imported/fruit.png-33b325b6fecf0ae3ad310b50fcb64d04.ctex"
+uid="uid://cvkbqau81p13l"
+path="res://.godot/imported/Dark-Tree.png-46f8ea7a60ab1d04afe6217c728873c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/fruit.png"
-dest_files=["res://.godot/imported/fruit.png-33b325b6fecf0ae3ad310b50fcb64d04.ctex"]
+source_file="res://scenes/tiles/Dark-Tree.png"
+dest_files=["res://.godot/imported/Dark-Tree.png-46f8ea7a60ab1d04afe6217c728873c3.ctex"]
 
 [params]
 

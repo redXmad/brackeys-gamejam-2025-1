@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=4 uid="uid://bxr5teg504nvs"]
+
+[ext_resource type="PackedScene" uid="uid://d1c318pvnpu76" path="res://scenes/player.tscn" id="1_3hwyy"]
+[ext_resource type="PackedScene" uid="uid://b12jm6cu6dsq8" path="res://scenes/ground_tile_map.tscn" id="2_8osdv"]
+
+[node name="Level_2" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_3hwyy")]
+position = Vector2(12, 22)
+
+[node name="Tileset" type="Node2D" parent="."]
+
+[node name="water" type="TileMapLayer" parent="Tileset"]
+
+[node name="lava" type="TileMapLayer" parent="Tileset"]
+
+[node name="GroundTileMap" parent="Tileset" instance=ExtResource("2_8osdv")]
+tile_map_data = PackedByteArray("AAAAAAIAAAACAAUAAAABAAIAAAACAAUAAAACAAIAAAACAAUAAAADAAIAAAACAAUAAAAEAAIAAAACAAUAAAAFAAIAAAACAAUAAAAGAAIAAAAGAAAAAAA=")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csp62jl64q6o0"
-path="res://.godot/imported/tunnel.png-0bd1cd1b0534546296aa42b26c100eb2.ctex"
+uid="uid://copecguifk5cv"
+path="res://.godot/imported/Green-Tree.png-4e8b686b4c48e88ad1771124a318663c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/sprite/tunnel.png"
-dest_files=["res://.godot/imported/tunnel.png-0bd1cd1b0534546296aa42b26c100eb2.ctex"]
+source_file="res://scenes/tiles/Green-Tree.png"
+dest_files=["res://.godot/imported/Green-Tree.png-4e8b686b4c48e88ad1771124a318663c.ctex"]
 
 [params]
 

@@ -31,7 +31,7 @@ func _on_body_entered(body: Node2D) -> void:
 func start_slow_time():
 	slow_time_active = true
 	Engine.time_scale = 0.2  # Slow down time by 90%
-	player.camera.position_smoothing_speed *= 5
+	#player.camera.position_smoothing_speed *= 5
 	
 	# Wait for the timer to timeout
 	await get_tree().create_timer(slow_time_duration).timeout
@@ -43,7 +43,7 @@ func start_slow_time():
 func stop_slow_time():
 	slow_time_active = false
 	Engine.time_scale = 1.0  # Restore normal speed
-	player.camera.position_smoothing_speed /= 5
+	#player.camera.position_smoothing_speed /= 5
 
 func disable_portals():
 	source_portal.disable_portal()

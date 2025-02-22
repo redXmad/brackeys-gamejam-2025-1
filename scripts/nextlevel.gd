@@ -1,6 +1,6 @@
 extends Area2D
 
-const FILE_PATH = "res://scenes/Level_"
+const FILE_PATH = "res://scenes/levels/level_"
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"): # Replace with function body.

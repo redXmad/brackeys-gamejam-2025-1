@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b83mpluwwnfkd"]
 
-[ext_resource type="Script" path="res://slowtime_area.gd" id="1_re5id"]
+[ext_resource type="Script" path="res://scripts/slowtime_area.gd" id="1_re5id"]
 [ext_resource type="PackedScene" uid="uid://b77qvymrlpc08" path="res://scenes/portal.tscn" id="2_5gwwt"]
 
 [node name="SlowtimeArea" type="Area2D" node_paths=PackedStringArray("source_portal", "destination_portal")]

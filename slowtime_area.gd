@@ -3,7 +3,7 @@ extends Area2D
 @onready var player = get_node("/root/MainScene/Player")  # Make sure this is the correct path to your player
 
 var slow_time_active = false
-var slow_time_duration = 0.2  # How long time will stay slow (in seconds)
+var slow_time_duration = 0.4  # How long time will stay slow (in seconds)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and not slow_time_active:

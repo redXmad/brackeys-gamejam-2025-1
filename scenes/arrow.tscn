@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhur8vsi1a7qd"]
+
+[ext_resource type="Script" path="res://scenes/arrow.gd" id="1_lvwb1"]
+[ext_resource type="Texture2D" uid="uid://cnxo13p6r47jb" path="res://assests/sprite/arrow.png" id="1_ucx46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_angrf"]
+size = Vector2(13, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oueq4"]
+size = Vector2(11, 3)
+
+[node name="Arrow" type="Node2D"]
+script = ExtResource("1_lvwb1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -1)
+texture = ExtResource("1_ucx46")
+
+[node name="ArrowDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowDetector"]
+position = Vector2(4.5, -0.5)
+shape = SubResource("RectangleShape2D_angrf")
+
+[node name="AnimatableBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(4.5, -0.5)
+shape = SubResource("RectangleShape2D_oueq4")
+one_way_collision = true
+
+[connection signal="body_entered" from="ArrowDetector" to="." method="_on_arrow_detector_body_entered"]

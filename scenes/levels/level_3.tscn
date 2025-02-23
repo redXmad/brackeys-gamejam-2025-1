@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dwo03sfuk1tlw"]
+[gd_scene load_steps=15 format=4 uid="uid://dwo03sfuk1tlw"]
 
 [ext_resource type="PackedScene" uid="uid://d1c318pvnpu76" path="res://scenes/player.tscn" id="1_gb1b5"]
 [ext_resource type="Texture2D" uid="uid://cqyvxu16xhfi6" path="res://assests/sprite/water.png" id="2_6lf25"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bd8enojvhlfg3" path="res://assests/sprite/sky.png" id="6_4ng26"]
 [ext_resource type="PackedScene" uid="uid://birxgv21lx2u3" path="res://scenes/nextlevel.tscn" id="7_4w0ql"]
 [ext_resource type="Texture2D" uid="uid://dgh2sscx1yab5" path="res://assests/sprite/tileset.png" id="8_7qey8"]
+[ext_resource type="PackedScene" uid="uid://drvfkss4d576j" path="res://scenes/restart_button.tscn" id="9_046n5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_espv7"]
 texture = ExtResource("2_6lf25")
@@ -135,3 +136,9 @@ region_rect = Rect2(0, 0, 32.0626, 19.7097)
 [node name="Nextlevel" parent="." instance=ExtResource("7_4w0ql")]
 z_index = 5
 position = Vector2(309, 32)
+
+[node name="Restart_button" parent="." instance=ExtResource("9_046n5")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 258.0
+offset_bottom = 260.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cw2yake18hs6l"]
+[gd_scene load_steps=14 format=4 uid="uid://cw2yake18hs6l"]
 
 [ext_resource type="PackedScene" uid="uid://d1c318pvnpu76" path="res://scenes/player.tscn" id="1_uosiv"]
 [ext_resource type="Texture2D" uid="uid://cqyvxu16xhfi6" path="res://assests/sprite/water.png" id="2_6be7a"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b83mpluwwnfkd" path="res://scenes/slowtime_area.tscn" id="5_1le56"]
 [ext_resource type="Texture2D" uid="uid://bd8enojvhlfg3" path="res://assests/sprite/sky.png" id="6_jhxhn"]
 [ext_resource type="PackedScene" uid="uid://birxgv21lx2u3" path="res://scenes/nextlevel.tscn" id="7_nyyji"]
+[ext_resource type="PackedScene" uid="uid://drvfkss4d576j" path="res://scenes/restart_button.tscn" id="8_q080t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_espv7"]
 texture = ExtResource("2_6be7a")
@@ -126,3 +127,9 @@ texture = ExtResource("6_jhxhn")
 [node name="Nextlevel" parent="." instance=ExtResource("7_nyyji")]
 z_index = 5
 position = Vector2(304, 32)
+
+[node name="Restart_button" parent="." instance=ExtResource("8_q080t")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 258.0
+offset_bottom = 260.0

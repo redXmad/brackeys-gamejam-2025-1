@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://do52dh8f5myev"]
+[gd_scene load_steps=12 format=4 uid="uid://do52dh8f5myev"]
 
 [ext_resource type="PackedScene" uid="uid://d1c318pvnpu76" path="res://scenes/player.tscn" id="1_ror6w"]
 [ext_resource type="PackedScene" path="res://scenes/water_tile_map.tscn" id="2_aj026"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bd8enojvhlfg3" path="res://assests/sprite/sky.png" id="6_55xet"]
 [ext_resource type="PackedScene" uid="uid://birxgv21lx2u3" path="res://scenes/nextlevel.tscn" id="7_773q5"]
 [ext_resource type="PackedScene" uid="uid://b73kphnbw8qy2" path="res://scenes/archer.tscn" id="8_urd50"]
+[ext_resource type="PackedScene" uid="uid://drvfkss4d576j" path="res://scenes/restart_button.tscn" id="9_4jaj0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_66e7x"]
 distance = -20.0
@@ -65,3 +66,9 @@ position = Vector2(31, 109)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Archer2"]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_2h1i7")
+
+[node name="Restart_button" parent="." instance=ExtResource("9_4jaj0")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 258.0
+offset_bottom = 260.0

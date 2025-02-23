@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cj5e2n0rkr5qs"]
+[gd_scene load_steps=11 format=4 uid="uid://cj5e2n0rkr5qs"]
 
 [ext_resource type="PackedScene" uid="uid://d1c318pvnpu76" path="res://scenes/player.tscn" id="1_m6knr"]
 [ext_resource type="PackedScene" path="res://scenes/water_tile_map.tscn" id="2_2gjak"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bd8enojvhlfg3" path="res://assests/sprite/sky.png" id="6_1ooah"]
 [ext_resource type="PackedScene" uid="uid://birxgv21lx2u3" path="res://scenes/nextlevel.tscn" id="7_7x0hc"]
 [ext_resource type="PackedScene" uid="uid://cbr4e54g357dn" path="res://scenes/spiketrap.tscn" id="8_rd6py"]
+[ext_resource type="PackedScene" uid="uid://drvfkss4d576j" path="res://scenes/restart_button.tscn" id="9_7veni"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_66e7x"]
 distance = -20.0
@@ -52,3 +53,9 @@ position = Vector2(304, 65)
 
 [node name="Spikes" parent="." instance=ExtResource("8_rd6py")]
 position = Vector2(137, 160)
+
+[node name="Restart_button" parent="." instance=ExtResource("9_7veni")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 258.0
+offset_bottom = 260.0

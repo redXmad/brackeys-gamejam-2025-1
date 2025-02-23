@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		AudioController.play_jump()  # 🔹 Now the sound only plays on jump
 
 	var direction := Input.get_axis("move_left", "move_right")
 
@@ -44,15 +45,14 @@ func _physics_process(delta: float) -> void:
 				animation.play("idle")
 			else:
 				animation.play("run")
-		#else:
-			#animation.play("jump")
-	
+		else:
+			animation.play("jump")  # This will only play the animation, no sound
+
 	if state == States.FIREBALL:
 		if velocity.y > 0:
 			unfireball()
-	
-	# Apply movement
 
+	# Apply movement
 	if direction:
 		velocity.x = direction * SPEED
 	else:

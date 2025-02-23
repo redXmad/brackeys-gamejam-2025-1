@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://drvfkss4d576j"]
+
+[ext_resource type="Texture2D" uid="uid://dmglkirvyxib7" path="res://assests/sprite/restart.png" id="1_omxpi"]
+[ext_resource type="Script" path="res://scripts/restart_button.gd" id="1_r548f"]
+
+[node name="Restart_button" type="Button"]
+z_index = 10
+offset_left = -9.0
+offset_top = -17.0
+offset_right = 249.0
+offset_bottom = 241.0
+scale = Vector2(0.0726561, 0.0672612)
+icon = ExtResource("1_omxpi")
+flat = true
+script = ExtResource("1_r548f")

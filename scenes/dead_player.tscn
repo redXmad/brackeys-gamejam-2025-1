@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqng8xouob8vy"]
+
+[ext_resource type="Texture2D" uid="uid://bqtj5gvibmqbi" path="res://assests/sprite/player-dead.png" id="1_uks5a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_og4aw"]
+size = Vector2(16, 8)
+
+[node name="DeadPlayer" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_uks5a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_og4aw")

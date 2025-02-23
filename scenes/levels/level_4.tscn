@@ -125,4 +125,4 @@ texture = ExtResource("6_ikuwt")
 
 [node name="Nextlevel" parent="." instance=ExtResource("7_4w36p")]
 z_index = 5
-position = Vector2(289, 65)
+position = Vector2(304, 65)

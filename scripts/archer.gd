@@ -1,6 +1,5 @@
-extends CharacterBody2D
+extends Area2D
 
-@export var detection_zone: Area2D
 @export var arrow: PackedScene
 
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
@@ -15,15 +14,8 @@ var player_inside_zone: bool = false
 var arrow_direction: Vector2
 var shooting: bool = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	if detection_zone:
-		detection_zone.connect("body_entered", _on_detection_zone_body_entered)
-		detection_zone.connect("body_exited", _on_detection_zone_body_exited)
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(shoot_timer.time_left)
 	if player_inside_zone:
 		ray_cast_2d.target_position = (player.global_position + Vector2(0, -8)) - ray_cast_2d.global_position
 		collider = ray_cast_2d.get_collider()
@@ -44,6 +36,7 @@ func _on_detection_zone_body_entered(body: Node2D) -> void:
 
 func _on_detection_zone_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
+		#shoot_timer.stop()
 		player_inside_zone = false
 		shooting = false
 
@@ -57,5 +50,5 @@ func shoot() -> void:
 	a.global_position = global_position + Vector2(0, -8)
 
 func _on_shoot_timer_timeout() -> void:
-	print("timeout")
-	shoot()
+	if collider == player:
+		shoot()

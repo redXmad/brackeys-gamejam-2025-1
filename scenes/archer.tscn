@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b73kphnbw8qy2"]
+[gd_scene load_steps=19 format=3 uid="uid://b73kphnbw8qy2"]
 
 [ext_resource type="Script" path="res://scripts/archer.gd" id="1_gqm30"]
 [ext_resource type="Texture2D" uid="uid://dbqt6a7a0wfkw" path="res://assests/sprite/enemy-archer.png" id="1_wle2n"]
@@ -115,15 +115,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbnv2"]
-size = Vector2(8, 15)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ipnid"]
-radius = 164.076
-
-[node name="Archer" type="CharacterBody2D" node_paths=PackedStringArray("detection_zone")]
+[node name="Archer" type="Area2D"]
 script = ExtResource("1_gqm30")
-detection_zone = NodePath("DetectionZone")
 arrow = ExtResource("2_r60un")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -131,21 +124,13 @@ position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_6rwjw")
 animation = &"shoot"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7.5)
-shape = SubResource("RectangleShape2D_rbnv2")
-
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(0, -12)
 target_position = Vector2(0, 0)
 
-[node name="DetectionZone" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]
-position = Vector2(0, -8)
-shape = SubResource("CircleShape2D_ipnid")
-
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 3.0
 
+[connection signal="body_entered" from="." to="." method="_on_detection_zone_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_detection_zone_body_exited"]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

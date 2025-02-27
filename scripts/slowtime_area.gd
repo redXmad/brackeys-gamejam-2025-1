@@ -14,7 +14,6 @@ func _get_configuration_warninga() -> PackedStringArray:
 	return []
 
 func _ready() -> void:
-	print(!source_portal)
 	if source_portal and destination_portal:
 		destination_portal.scale.y *= -1
 		source_portal.target_portal = destination_portal

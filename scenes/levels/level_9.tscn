@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=4 uid="uid://h4tj1pfu70ga"]
 
 [ext_resource type="PackedScene" uid="uid://d1c318pvnpu76" path="res://scenes/player.tscn" id="1_hu6b5"]
-[ext_resource type="PackedScene" path="res://scenes/water_tile_map.tscn" id="2_tvs6l"]
-[ext_resource type="PackedScene" path="res://scenes/lava_tile_map.tscn" id="3_jjvxn"]
+[ext_resource type="PackedScene" uid="uid://2t7nylyuulua" path="res://scenes/water_tile_map.tscn" id="2_tvs6l"]
+[ext_resource type="PackedScene" uid="uid://c7nw8yo776bvj" path="res://scenes/lava_tile_map.tscn" id="3_jjvxn"]
 [ext_resource type="PackedScene" uid="uid://b12jm6cu6dsq8" path="res://scenes/ground_tile_map.tscn" id="4_la25m"]
 [ext_resource type="PackedScene" uid="uid://b83mpluwwnfkd" path="res://scenes/slowtime_area.tscn" id="5_g6osx"]
 [ext_resource type="Texture2D" uid="uid://bd8enojvhlfg3" path="res://assests/sprite/sky.png" id="6_rynym"]
 [ext_resource type="PackedScene" uid="uid://birxgv21lx2u3" path="res://scenes/nextlevel.tscn" id="7_18qrx"]
 [ext_resource type="PackedScene" uid="uid://cbr4e54g357dn" path="res://scenes/spiketrap.tscn" id="7_yrhvi"]
-[ext_resource type="PackedScene" path="res://scenes/lava_area.tscn" id="8_hig6f"]
+[ext_resource type="PackedScene" uid="uid://bkb20dschu527" path="res://scenes/lava_area.tscn" id="8_hig6f"]
 [ext_resource type="PackedScene" uid="uid://drvfkss4d576j" path="res://scenes/restart_button.tscn" id="10_fl2h0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_66e7x"]

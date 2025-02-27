@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=4 uid="uid://c5xbg7pdqqk1h"]
 
 [ext_resource type="PackedScene" uid="uid://d1c318pvnpu76" path="res://scenes/player.tscn" id="1_324ce"]
-[ext_resource type="PackedScene" path="res://scenes/lava_area.tscn" id="2_10ksj"]
-[ext_resource type="PackedScene" path="res://scenes/water_tile_map.tscn" id="2_fbgmw"]
-[ext_resource type="PackedScene" path="res://scenes/lava_tile_map.tscn" id="3_madcs"]
+[ext_resource type="PackedScene" uid="uid://bkb20dschu527" path="res://scenes/lava_area.tscn" id="2_10ksj"]
+[ext_resource type="PackedScene" uid="uid://2t7nylyuulua" path="res://scenes/water_tile_map.tscn" id="2_fbgmw"]
+[ext_resource type="PackedScene" uid="uid://c7nw8yo776bvj" path="res://scenes/lava_tile_map.tscn" id="3_madcs"]
 [ext_resource type="PackedScene" uid="uid://b12jm6cu6dsq8" path="res://scenes/ground_tile_map.tscn" id="4_osii1"]
 [ext_resource type="PackedScene" uid="uid://b83mpluwwnfkd" path="res://scenes/slowtime_area.tscn" id="5_2h210"]
 [ext_resource type="Texture2D" uid="uid://bd8enojvhlfg3" path="res://assests/sprite/sky.png" id="6_ji1wy"]

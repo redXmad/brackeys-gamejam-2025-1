@@ -55,13 +55,14 @@ z_index = 5
 position = Vector2(304, 65)
 
 [node name="Archer" parent="." instance=ExtResource("8_urd50")]
-position = Vector2(293, 158)
+position = Vector2(288, 161)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Archer"]
+position = Vector2(-8, -1)
 polygon = PackedVector2Array(4, 9, -136, 9, -136, -45, -79, -72, 4, -72)
 
 [node name="Archer2" parent="." instance=ExtResource("8_urd50")]
-position = Vector2(31, 109)
+position = Vector2(31, 113)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Archer2"]
 position = Vector2(0, -5)
